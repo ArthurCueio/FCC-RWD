@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Gamer Style Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css">
+</head>
+
+<body>
+  <div id="header">
+    <h1 id="title">Gamer style survey <i id="dark-switch" class="fas fa-moon"></i></h1>
+    <p id="description">What's your style of gaming?</p>
+  </div>
+
+  <form id="survey-form" action="post">
+    <h3>Personal information</h3>
+    <div class="form-group">
+      <label id="name-label" for="name">Name: </label>
+      <input type="text" id="name" name="name" placeholder="Full Name" required>
+    </div>
+    <div class="form-group">
+      <label id="email-label" for="email">Email: </label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+    </div>
+    <div class="form-group">
+      <label id="number-label" for="age">Age: </label>
+      <input type="number" id="number" name="age" min="0" max="255" placeholder="Age" required>
+    </div>
+    <h3>Questions</h3>
+    <div class="form-group">
+      <label for="dropdown">Which plataform is your favorite? </label>
+      <select name="select" id="dropdown">
+        <option value="0" disabled>- Select an option -</option>
+        <option value="1">PC</option>
+        <option value="2">Console</option>
+        <option value="3">Mobile</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="">Do you use community made modifications (Mods)? </label>
+      <div>
+        <input id="radio1" type="radio" name="mods" value="0"> <label for="radio1">No</label>
+        <input id="radio2" type="radio" name="mods" value="1"> <label for="radio2">Yes</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Your favorite categories (Select all that apply)</label>
+      <div>
+        <input id="checkbox1" type="checkbox" name="favCat" value="fps"> <label for="checkbox1">FPS</label> <br>
+        <input id="checkbox2" type="checkbox" name="favCat" value="adventure"> <label for="checkbox2">Adventure</label>
+        <br>
+        <input id="checkbox3" type="checkbox" name="favCat" value="rpg"> <label for="checkbox3">RPG</label> <br>
+        <input id="checkbox4" type="checkbox" name="favCat" value="strategy"> <label for="checkbox4">Strategy</label>
+        <br>
+        <input id="checkbox5" type="checkbox" name="favCat" value="simulation"> <label
+          for="checkbox5">Simulation</label> <br>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="textarea">Describe a game you wish existed but no one has made yet</label>
+      <textarea name="opinion" id="textarea" placeholder="(optional)"></textarea>
+    </div>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+
+  <footer>
+    <small>Made by <a href="https://github.com/ArthurCueio">Arthur Coelho</a></small>
+    <br>
+    <small>Free Code Camp Survey Page project</small>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
